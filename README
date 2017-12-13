@@ -1,0 +1,27 @@
+README
+
+The makefile will compile everything for you with the 'make' command
+  Other targets are 'clean' and 'package'
+
+The MessageNode and the Registry run from the command line with the arguements
+specified in the assignment
+
+The MessageNodes will register themselves as soon as they are started, so they
+need to be started after the Registry
+
+As the MessageNodes register, the information from their registration message
+will be displayed, as well as the number of nodes that have been added so far
+  This step sometimes hangs a little. There can be 5-7 seconds between registrations
+
+After all the nodes are registered, the setup-overlay command can be given.
+If you don't specify an argument from that command, the prompt will sit there
+until it is given another token to read.
+When this command has finished, it will alert you that you can send the task
+initiate message.
+
+The start command has the same behavior as the setup-overlay command, in that
+you must specify an argument for it to do anything.
+
+You will be alerted as the registry receives messages from nodes saying they're done.
+After all have completed, then the program waits for 20 seconds, and then prints
+out the final summary of all the traffic information.
